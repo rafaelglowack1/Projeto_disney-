@@ -1,6 +1,7 @@
 @use 'variaveis';
 .shows{
     padding: 2vw 5.6vw 2vw 5.6vw;
+    min-height: 55vw;
     &__list{
         margin-top: 44px;
         display: none;
