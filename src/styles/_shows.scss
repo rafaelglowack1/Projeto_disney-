@@ -7,6 +7,14 @@
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+
+        @media (max-width: 768px){
+            grid-template-columns: 1fr 1fr ;
+
+        }
+
+
         &__itens{
             img{
                 max-width: 100%;
@@ -22,18 +30,29 @@
     &__tabs{
         display: flex;
         justify-content: center;
+
+        @media (max-width:768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 18px;
+            
+        }
         &__button{
             cursor: pointer;
             color: variaveis.$corTextoSecundaria;
             font-size: 20px;
-            border: none;
-
-            
+            border: none;            
             padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
             border-bottom: 5px solid transparent;
+
+            @media (max-width:768px){
+                font-size: 16px;
+
+                
+            }
 
             &--is-active{
                 border-color: variaveis.$corTextoSecundaria;
