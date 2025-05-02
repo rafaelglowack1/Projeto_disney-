@@ -6,6 +6,7 @@
 @use 'faq';
 @use 'footer';
 @use 'header';
+@use "sass:color";
 
 
 @font-face {
@@ -118,14 +119,16 @@ body{
 
 
     &:hover{
-        background-color: lighten(variaveis.$corFundoBotaoPrimario,3% );
+        background-color: color.adjust(variaveis.$corFundoBotaoPrimario, $lightness: 3%);
+
     }
 
     &--secundary{
         background-color: variaveis.$corFundoBotaoSecundario;
         border-color: variaveis.$corFundoBotaoSecundario;
         &:hover{
-            background-color: lighten(variaveis.$corFundoBotaoSecundario,3% );
+            background-color: color.adjust(variaveis.$corFundoBotaoPrimario, $lightness: 3%);
+
         }
 
     }
@@ -134,7 +137,9 @@ body{
         border-color: variaveis.$corTextoSecundaria;
 
         &:hover{
-            background-color: lighten(rgba(255, 255, 255, 0.726),3% );
+            background-color: color.adjust(rgba(255, 255, 255, 0.726), $lightness: 3%);
+
+;
             color: black;
         
 
